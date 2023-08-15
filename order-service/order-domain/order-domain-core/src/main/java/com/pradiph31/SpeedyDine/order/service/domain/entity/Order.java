@@ -115,7 +115,7 @@ public class Order extends AggregateRoot<OrderId> {
         if (this.failureMessages != null && failureMessages != null) {
             this.failureMessages.addAll(failureMessages.stream().filter(message -> !message.isEmpty()).toList());
         }
-        if(this.failureMessages == null) {
+        if (this.failureMessages == null) {
             this.failureMessages = failureMessages;
         }
     }
@@ -152,6 +152,10 @@ public class Order extends AggregateRoot<OrderId> {
         return failureMessages;
     }
 
+    public static Builder builder() {
+        return new Builder();
+    }
+
     public static final class Builder {
         private OrderId orderId;
         private CustomerId customerId;
@@ -166,9 +170,6 @@ public class Order extends AggregateRoot<OrderId> {
         private Builder() {
         }
 
-        public static Builder builder() {
-            return new Builder();
-        }
 
         public Builder id(OrderId val) {
             orderId = val;
