@@ -1,4 +1,4 @@
-package com.pradiph31.domain.entity;
+package com.pradiph31.SpeedyDine.domain.entity;
 
 import java.util.Objects;
 

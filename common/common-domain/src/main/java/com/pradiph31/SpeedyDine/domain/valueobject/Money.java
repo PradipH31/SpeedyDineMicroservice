@@ -1,4 +1,4 @@
-package com.pradiph31.domain.valueobject;
+package com.pradiph31.SpeedyDine.domain.valueobject;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
